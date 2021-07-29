@@ -22,9 +22,9 @@ header {
     position: relative;
     width: 100%;
     min-width: 320px;
-    height: 180px;
+    height: 100px;
     text-align: center;    
-    margin-bottom: 50px;
+    margin-bottom: 30px;
 }
 header img {
     margin-left: auto;
@@ -36,11 +36,11 @@ header img {
 header h1 {
     font-size: 2.4rem;
     font-weight: 500;
-    color: var(--blanco);
+    color: white;
     margin-bottom: 15px;
 }
 header p {
-    color: var(--blanco);
+    color: white;
     margin-bottom: 7px;
     font-weight: 300;
     font-size: 1.4rem;
@@ -58,15 +58,50 @@ header span {
 }
 header p a {
     color: white;
-    cursor: none;
+    cursor: pointer;
     text-decoration: none;
 }
 
 /* Secciones */
 
-main {
+main {            
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: space-around;
+    flex-wrap: wrap;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;        
+    padding: 0px 30px;
+    min-height: calc(100vh - 200px);
+}
+
+.footer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    height: 100px;
+    width: 100%;
+}
+
+.footer a {
+    color: white;
+    cursor: pointer;
+    font-size: 14px;
+    padding-left: 30px;
+    text-decoration: none;
+}
+  
+.footer a:hover {
+    text-decoration: underline;
 }
 
 section {
@@ -76,8 +111,7 @@ section {
     height: auto;
     margin: 30px auto;
     padding: 15px;    
-    border-radius: 5px;
-    color: var(--blanco);
+    border-radius: 5px;    
 }
 section h2 {
     font-weight: 500;
@@ -110,7 +144,7 @@ form input {
     background-color: #ffffff00;
     height: 25px;
     width: 100%;
-    color: var(--blanco);
+    color: white;
     align-items: center;
 }
 input::placeholder {
@@ -158,9 +192,8 @@ section  .botton-container button {
     width: 125px;
     border: 1px solid #ffffff3f;
     background-color: #ffffff21;
-    border-radius: 100px;
-    font-family: 'Ubuntu', sans-serif;
-    color: var(--blanco);
+    border-radius: 100px;    
+    color: white;
 }
 section  .botton-container button:hover {
     box-shadow: 0 0.1rem 0.6rem 0 #20212447;
@@ -183,3 +216,23 @@ section span {
     border: 1px solid #ffffff3f;
 }
 
+
+@media only screen and (max-width: 600px) {
+    .main {
+        background-color: transparent;
+        border: none;
+        padding: 0px;
+        width: 100%;                        
+    }
+    .footer {
+        -webkit-box-align: start;
+            -ms-flex-align: start;
+                align-items: flex-start;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        height: 100px;
+        width: 100%;
+    }
+}
