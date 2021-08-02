@@ -111,7 +111,8 @@ section {
     height: auto;
     margin: 30px auto;
     padding: 15px;    
-    border-radius: 5px;    
+    border-radius: 5px;  
+    color: white;  
 }
 section h2 {
     font-weight: 500;
@@ -154,6 +155,14 @@ input::placeholder {
 form label {
     width: 90%;
 }
+
+form span {
+    text-align: center;
+    font-size: 1.6rem;
+    font-weight: 300;
+    margin: 10px 0 ;
+}
+
 input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer-spin-button { 
   -webkit-appearance: none; 
   margin: 0; 
@@ -174,7 +183,7 @@ form div:hover {
     box-shadow: 0 0.1rem 0.6rem 0 #20212447;
     border-color: #dfe1e500;
 }
-section  .botton-container {
+section  .button-container {
     justify-content: space-between;
     margin-top: 20px;
     background: none;    
@@ -182,11 +191,11 @@ section  .botton-container {
     border: none;
     max-width: 260px;
 }
-form .botton-container:hover {
+form .button-container:hover {
     box-shadow: none;
     border: none;
 }
-section  .botton-container button {
+section  .button-container button {
     display: block;
     height: 25px;
     width: 125px;
@@ -195,7 +204,26 @@ section  .botton-container button {
     border-radius: 100px;    
     color: white;
 }
-section  .botton-container button:hover {
+section  .button-container button:hover {
+    box-shadow: 0 0.1rem 0.6rem 0 #20212447;
+    border-color: #dfe1e500;
+}
+
+section button {    
+    color: white;
+    margin: 0 auto;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 25px;
+    background-color: #ffffff21;    
+    border-radius: 10rem;
+    border: 1px solid #ffffff3f;
+    max-width: 296px;
+    align-items: center;
+}
+section button:hover {
     box-shadow: 0 0.1rem 0.6rem 0 #20212447;
     border-color: #dfe1e500;
 }
